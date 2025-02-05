@@ -708,7 +708,7 @@ video {
 
 .main {
   background: rgb(3, 32, 0);
-  background-image: url(/src/assets/bg-1.png);
+  background-image: url(./assets/bg-1.png);
   background-repeat: repeat;
   background-size: 60px;
   margin: 0;
@@ -747,7 +747,7 @@ video {
   content: '';
   position: absolute;
   inset: 0;
-  background: url(/src/assets/backimg.PNG);
+  background: url(./assets/backimg.PNG);
   -o-object-fit: cover;
      object-fit: cover;
   box-shadow: 2rem;
