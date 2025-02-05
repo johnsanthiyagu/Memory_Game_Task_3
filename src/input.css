@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+.main {
+    background: rgb(3, 32, 0);
+    background-image: url(/src/assets/bg-1.png);
+    background-repeat: repeat;
+    background-size: 60px;
+    margin: 0;
+    padding: 0;
+    background-blend-mode: multiply;
+
+}
+
+.game {
+    transform-style: preserve-3d;
+    perspective: 500px;
+    gap: 10px;
+    height: 400px;
+    width: 500px;
+}
+
+
+.itme {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: blueviolet;
+    font-size: 3rem;
+    transition: 0.25s;
+    padding: 1rem;
+    transform: rotateY(180deg);
+    height: 100px;
+    width: 100px;
+
+
+}
+
+.item.boxOpen {
+    transform: rotateY(0deg);
+}
+
+.itme::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url(/src/assets/backimg.PNG);
+    object-fit: cover;
+    box-shadow: 2rem;
+    transition: 0.25s;
+    transform: rotateY(0deg);
+
+    backface-visibility: hidden;
+
+}
+
+.boxOpen:after,
+.boxMatch:after {
+    transform: rotateY(180deg);
+}
